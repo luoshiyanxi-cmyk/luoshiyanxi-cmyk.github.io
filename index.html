@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="luoshiyanxi-cmyk 的个人主页，展示个人简介、技能方向、项目计划与联系方式。"
+    />
+    <title>luoshiyanxi-cmyk | 个人主页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Inter:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">L</span>
+        <span>个人主页</span>
+      </a>
+      <nav class="top-nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#work">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>const profile = {
+  name: "luoshiyanxi-cmyk",
+  focus: ["Web", "AI", "Creative Coding"],
+  status: "building in public"
+};</code></pre>
+          </div>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow">Developer / Builder / Learner</p>
+          <h1 id="hero-title">你好，我是 luoshiyanxi-cmyk。</h1>
+          <p class="hero-copy">
+            我正在搭建自己的数字主页，用代码整理想法、作品和成长轨迹。这里会逐步收录我的项目、学习记录和可以被复用的小工具。
+          </p>
+          <div class="hero-actions" aria-label="主要操作">
+            <a class="button primary" href="https://github.com/luoshiyanxi-cmyk" target="_blank" rel="noreferrer">
+              查看 GitHub
+            </a>
+            <a class="button secondary" href="#contact">联系我</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section intro-section" aria-labelledby="about-title">
+        <div>
+          <p class="section-kicker">About</p>
+          <h2 id="about-title">把想法做成能用的东西。</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            这是一个先行版本：干净、轻量、容易改。等你补充真实头像、姓名、学校/职业方向、项目链接后，它可以继续升级成更完整的作品集。
+          </p>
+          <p>
+            当前定位先放在 Web 开发、AI 工具和创意实践。主页结构已经留好入口，适合后续部署到 GitHub Pages、Vercel 或自己的域名。
+          </p>
+        </div>
+      </section>
+
+      <section class="section stats-section" aria-label="主页摘要">
+        <article>
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label">展示模块</span>
+        </article>
+        <article>
+          <span class="stat-number" data-count="1">0</span>
+          <span class="stat-label">GitHub 入口</span>
+        </article>
+        <article>
+          <span class="stat-number" data-count="100">0</span>
+          <span class="stat-label">可继续定制</span>
+        </article>
+      </section>
+
+      <section class="section" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="section-kicker">Focus</p>
+          <h2 id="skills-title">我关注的方向</h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-card">
+            <h3>前端体验</h3>
+            <p>构建清晰、响应式、能快速验证想法的网页与工具界面。</p>
+          </article>
+          <article class="skill-card">
+            <h3>AI 应用</h3>
+            <p>把模型能力接入真实工作流，用自动化减少重复劳动。</p>
+          </article>
+          <article class="skill-card">
+            <h3>持续学习</h3>
+            <p>记录学习过程、实验结果和可复用的代码片段。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="work" class="section work-section" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="section-kicker">Work</p>
+          <h2 id="work-title">项目展示</h2>
+        </div>
+        <div class="project-list">
+          <article class="project-card featured">
+            <div>
+              <p class="project-type">Website</p>
+              <h3>个人主页 v1</h3>
+              <p>
+                一个静态、快速、方便部署的个人主页起点，包含简介、能力方向、项目展示和联系入口。
+              </p>
+            </div>
+            <a href="https://github.com/luoshiyanxi-cmyk" target="_blank" rel="noreferrer">GitHub</a>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="project-type">Coming Soon</p>
+              <h3>作品集项目</h3>
+              <p>后续可以放课程项目、网页应用、AI 小工具或开源仓库。</p>
+            </div>
+            <span>待补充</span>
+          </article>
+          <article class="project-card">
+            <div>
+              <p class="project-type">Notes</p>
+              <h3>学习记录</h3>
+              <p>可以整理编程笔记、实验过程、读书笔记和技术总结。</p>
+            </div>
+            <span>待补充</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 id="contact-title">一起把想法做出来。</h2>
+          <p>现在先通过 GitHub 联系我。等你给我邮箱、微信二维码或社交账号，我可以继续补上更完整的联系区域。</p>
+        </div>
+        <a class="button primary" href="https://github.com/luoshiyanxi-cmyk" target="_blank" rel="noreferrer">
+          打开 GitHub 主页
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span id="year"></span> luoshiyanxi-cmyk</span>
+      <a href="#top">回到顶部</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
