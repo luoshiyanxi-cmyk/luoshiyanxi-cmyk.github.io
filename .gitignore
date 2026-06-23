@@ -1,0 +1,10 @@
+node_modules
+dist
+.env
+.env.local
+coverage
+*.log
+*.tsbuildinfo
+server/
+google-sites-eportfolio/
+luo-eportfolio-draft/
