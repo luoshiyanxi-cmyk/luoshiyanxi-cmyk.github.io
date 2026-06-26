@@ -1,18 +1,19 @@
 import {
   ArrowUpRight,
   BookOpen,
+  Bot,
   Code2,
   Github,
   GraduationCap,
   Mail,
   MapPin,
+  MessageSquareText,
   Sparkles,
   TerminalSquare
 } from "lucide-react";
 
 const person = {
-  nameCn: "罗世彦希",
-  nameEn: "Bruce Luo",
+  name: "Luo Shiyanxi",
   major: "AI&ET",
   githubUsername: "luoshiyanxi-cmyk",
   githubUrl: "https://github.com/luoshiyanxi-cmyk",
@@ -21,80 +22,115 @@ const person = {
   publicRepos: 0
 };
 
+const eportfolioUrl =
+  "https://sites.google.com/d/1WCGDCtpv6UhJbpI3iIAl8piH7yaH40qU/p/1hzMAYQY_DQJhoqYMCcrc1MkUJtlfax4q/edit";
+
 const focusAreas = [
   {
-    title: "AI 与教育技术",
-    description: "围绕 AI&ET 专业方向，探索人工智能如何帮助学习、教学、内容组织和个人效率提升。",
+    title: "AI and Educational Technology",
+    description: "Exploring how AI can support learning, teaching, content organization, and personal productivity.",
     icon: <GraduationCap size={20} />
   },
   {
-    title: "前端体验",
-    description: "把想法做成可以被打开、阅读和使用的页面，重视结构清晰、响应式布局和中文表达。",
+    title: "Frontend Experience",
+    description: "Turning ideas into pages that are easy to open, read, and use, with clear structure and responsive layout.",
     icon: <Sparkles size={20} />
   },
   {
-    title: "项目实践",
-    description: "从小工具开始迭代，记录假设、修改、验证结果和下一步实验，让作品慢慢长出来。",
+    title: "Project Practice",
+    description: "Building small tools, testing ideas, recording results, and growing a portfolio one practical project at a time.",
     icon: <TerminalSquare size={20} />
   }
 ];
 
 const projectIdeas = [
-  "大学课程学习计划生成器",
-  "AI&ET 学习笔记与资源库",
-  "Google Sites ePortfolio 内容包",
-  "个人作品主页与项目展示"
+  {
+    title: "Google Sites ePortfolio",
+    description:
+      "A Google Sites ePortfolio for collecting academic work, learning evidence, project reflections, and professional development materials.",
+    href: eportfolioUrl
+  },
+  {
+    title: "University study plan generator",
+    description: "A planning tool idea for turning course schedules and study goals into practical weekly learning plans."
+  },
+  {
+    title: "AI&ET learning notes and resource library",
+    description: "A future space for organizing AI, educational technology, NLP, and agent-workflow learning materials."
+  },
+  {
+    title: "Personal homepage and project showcase",
+    description: "This website, used as a compact public profile and portfolio entry point."
+  }
 ];
 
-const skills = ["AI&ET", "React", "TypeScript", "Vite", "Node.js", "GitHub", "中文内容设计"];
+const skillHighlights = [
+  {
+    title: "Agent Workflow",
+    description:
+      "Experienced with Codex and similar coding agents for research, implementation, debugging, and iterative project development.",
+    icon: <Bot size={20} />
+  },
+  {
+    title: "Coding Experience",
+    description:
+      "Comfortable building small web projects, working with React, TypeScript, Node.js, GitHub workflows, and practical debugging loops.",
+    icon: <Code2 size={20} />
+  },
+  {
+    title: "Natural Language Processing",
+    description:
+      "Familiar with NLP concepts and applications, including text processing, language models, prompt design, and AI-assisted learning tools.",
+    icon: <MessageSquareText size={20} />
+  }
+];
+
+const skills = ["Codex", "AI Agents", "Coding", "NLP", "React", "TypeScript", "Node.js", "GitHub"];
 
 export function App() {
   return (
     <main className="site-shell">
-      <nav className="top-nav" aria-label="主页导航">
-        <a className="brand" href="#home" aria-label="回到首页">
+      <nav className="top-nav" aria-label="Homepage navigation">
+        <a className="brand" href="#home" aria-label="Back to home">
           <Code2 size={22} />
-          <span>{person.nameEn}</span>
+          <span>{person.name}</span>
         </a>
         <div className="nav-links">
-          <a href="#work">方向</a>
-          <a href="#projects">项目</a>
-          <a href="#contact">联系</a>
+          <a href="#work">Focus</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
 
       <section className="hero" id="home">
         <div className="hero-copy">
           <p className="eyebrow">Personal homepage</p>
-          <h1>
-            {person.nameCn}
-            <span>{person.nameEn}</span>
-          </h1>
+          <h1>{person.name}</h1>
           <p className="hero-text">
-            我是 {person.nameEn}，专业方向是 {person.major}。这是一个先跑起来的个人主页原型，用来展示我的 GitHub 身份、学习方向、项目想法和后续作品。
+            I am {person.name}, studying {person.major}. This homepage is a first public version for my GitHub identity,
+            learning direction, project ideas, and future portfolio work.
           </p>
           <div className="hero-actions">
             <a className="primary-link" href={person.githubUrl} target="_blank" rel="noreferrer">
               <Github size={19} />
-              查看 GitHub
+              View GitHub
               <ArrowUpRight size={16} />
             </a>
             <a className="secondary-link" href="#projects">
               <BookOpen size={19} />
-              看项目方向
+              View Projects
             </a>
           </div>
         </div>
 
-        <aside className="profile-card" aria-label="个人公开资料">
-          <img src={person.avatar} alt={`${person.nameEn} 的 GitHub 头像`} />
+        <aside className="profile-card" aria-label="Public profile">
+          <img src={person.avatar} alt={`${person.name} GitHub avatar`} />
           <div>
             <span className="profile-label">{person.major}</span>
-            <h2>{person.nameCn}</h2>
-            <p>{person.nameEn}</p>
-            <p>GitHub：{person.githubUsername}</p>
-            <p>公开仓库：{person.publicRepos}</p>
-            <p>加入时间：{person.joinedAt}</p>
+            <h2>{person.name}</h2>
+            <p>GitHub: {person.githubUsername}</p>
+            <p>Public repositories: {person.publicRepos}</p>
+            <p>Joined: {person.joinedAt}</p>
           </div>
         </aside>
       </section>
@@ -102,7 +138,7 @@ export function App() {
       <section className="section-band" id="work">
         <div className="section-heading">
           <p className="eyebrow">Focus</p>
-          <h2>主页先定位成“AI&ET 学习 + 项目实践 + 成长记录”。</h2>
+          <h2>Positioning this homepage around AI&ET learning, project practice, and growth records.</h2>
         </div>
         <div className="focus-grid">
           {focusAreas.map((area) => (
@@ -118,22 +154,48 @@ export function App() {
       <section className="projects-layout" id="projects">
         <div className="project-copy">
           <p className="eyebrow">Projects</p>
-          <h2>作品区先留好位置，等仓库或案例准备好就能直接替换。</h2>
+          <h2>The project area is ready for real links, screenshots, and case notes.</h2>
           <p>
-            目前 GitHub 公开仓库还是 0 个，所以这里不假装已经有很多作品。更好的做法是先放真实方向，之后每完成一个项目就补上链接、截图和说明。
+            The public GitHub profile currently has no public repositories, so this section stays honest and focuses on
+            real directions. Each completed project can later be replaced with a repository link and a short write-up.
           </p>
         </div>
         <div className="project-list">
           {projectIdeas.map((project, index) => (
-            <article className="project-row" key={project}>
+            <article className="project-row" key={project.title}>
               <span>{String(index + 1).padStart(2, "0")}</span>
-              <strong>{project}</strong>
+              <div>
+                <strong>{project.title}</strong>
+                <p>{project.description}</p>
+                {project.href && (
+                  <a href={project.href} target="_blank" rel="noreferrer">
+                    Open ePortfolio
+                    <ArrowUpRight size={15} />
+                  </a>
+                )}
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="skills-band" aria-label="技能标签">
+      <section className="skills-showcase" id="skills">
+        <div className="section-heading">
+          <p className="eyebrow">Skills</p>
+          <h2>Skills I am building around AI agents, coding, and natural language processing.</h2>
+        </div>
+        <div className="skill-card-grid">
+          {skillHighlights.map((skill) => (
+            <article className="skill-card" key={skill.title}>
+              <span>{skill.icon}</span>
+              <h3>{skill.title}</h3>
+              <p>{skill.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="skills-band" aria-label="Skill tags">
         {skills.map((skill) => (
           <span key={skill}>{skill}</span>
         ))}
@@ -142,16 +204,20 @@ export function App() {
       <section className="contact-section" id="contact">
         <div>
           <p className="eyebrow">Contact</p>
-          <h2>下一步可以把这里换成你的真实简介、邮箱和作品链接。</h2>
+          <h2>Contact details and portfolio links can be added here next.</h2>
         </div>
         <div className="contact-actions">
           <a href={person.githubUrl} target="_blank" rel="noreferrer">
             <Github size={19} />
             GitHub
           </a>
+          <a href={eportfolioUrl} target="_blank" rel="noreferrer">
+            <BookOpen size={19} />
+            ePortfolio
+          </a>
           <a href="mailto:your-email@example.com">
             <Mail size={19} />
-            邮箱占位
+            Email placeholder
           </a>
           <span>
             <MapPin size={19} />
